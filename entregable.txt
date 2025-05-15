@@ -1,0 +1,27 @@
+¿De dónde sale la etiqueta Navigation?
+La etiqueta Navigation sale del archivo Navigation.jsx donde se define este componente.
+
+
+
+¿Cómo se recibieron esos parametros?
+export function Navigation({srcImg,alt}){
+  ...
+}
+srcImg y alt se reciben mediante la desestructuración de las props del componente. Son parte
+de el mismo.
+
+
+
+¿donde se importan los archivos css, las imagenes y cómo es que se importa un componente?
+Los archivos css se importan directamente en el archivo con imports como:
+import './App.css';
+import './grid.css';
+Las imágenes se importan como módulos en React gracias a configuraciones de bundlers como Webpack
+usado en proyactos creados con Vite:
+import logo from './assets/react.svg';
+Los componentes (.jsx, .tsx, o .js) se importan usando sintaxis de ES Modules. Pueden ser 
+importaciones por defecto o con nombre:
+import { Navigation } from './Navigation';
+import { Grid } from './Grid';
+Los componentes deben estar exportados en sus archivos. Por ejemplo, Navigation.jsx y Grid.jsx:
+export function Navigation({ srcImg, alt, items })
